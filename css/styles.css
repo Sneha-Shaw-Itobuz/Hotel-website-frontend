@@ -1,3 +1,16 @@
+.banner {
+  background: url(../assets/Rectangle3670.jpg);
+}
+
+.say-hello {
+  background: url(../assets/aerial-photography-outdoor-park-views.jpg) no-repeat
+    center;
+}
+
+.blue-background {
+  background-color: #0a205c;
+}
+
 .swiper-button-prev:after,
 .swiper-button-next:after {
   background: white;
@@ -14,6 +27,6 @@
   justify-content: center;
 }
 
-.swiper-button-disabled {
-  opacity: 0 !important;
+.swiper {
+  margin-right: unset !important;
 }
