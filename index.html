@@ -24,22 +24,36 @@
       class="flex w-full justify-between p-3 xl:px-5 items-center text-[#0a205c] relative"
     >
       <div
-        class="logo xl:w-[16%] w-full flex items-center text-center flex-col"
+        class="logo xl:w-[16%] w-[55%] flex items-center text-center flex-col"
       >
-        <h2 class="text-5xl font-light">MIKALTO</h2>
+        <h2 class="text-5xl font-light"><a href="#">MIKALTO</a></h2>
         <p>Hotels & Resorts</p>
       </div>
       <i class="fa fas fa-light fa-bars xl:hidden menu"></i>
       <div
         class="list hidden xl:flex xl:w-[30%] xl:static absolute top-full bg-white w-full text-center left-0 py-2"
       >
-        <ul class="flex w-full justify-between flex-col xl:flex-row">
-          <li><a href="#" class="my-5">Home</a></li>
-          <li><a href="#" class="my-5">Our Rooms</a></li>
-          <li><a href="#" class="my-5">Page</a></li>
-          <li><a href="#" class="my-5">Features</a></li>
-          <li><a href="#" class="my-5">Blog</a></li>
-          <li><a href="#" class="my-5">Contact</a></li>
+        <ul
+          class="flex w-full justify-between items-center flex-col xl:flex-row"
+        >
+          <li class="my-5">
+            <a href="#">Home</a>
+          </li>
+          <li class="my-5">
+            <a href="#">Our Rooms</a>
+          </li>
+          <li class="my-5">
+            <a href="#">Page</a>
+          </li>
+          <li class="my-5">
+            <a href="#">Features</a>
+          </li>
+          <li class="my-5">
+            <a href="#">Blog</a>
+          </li>
+          <li class="my-5 hover:text-white hover:bg-blue-900">
+            <a href="#">Contact</a>
+          </li>
         </ul>
       </div>
       <div class="right w-[5%] hidden xl:flex justify-evenly items-center">
@@ -55,14 +69,11 @@
     <!-- banner -->
     <section
       id="banner"
-      class="banner xl:h-[80vh] xl:mx-10 flex flex-col xl:flex-row items-center text-[#0a205c] text-light py-5"
+      class="banner xl:h-[80vh] md:mx-10 flex flex-col xl:flex-row items-center text-[#0a205c] text-light py-5"
     >
       <div class="left-text pl-10 xl:w-1/2">
-        <h1 class="text-3xl xl:text-6xl text-white mb-10 font-light">
-          Enjoy your <br />
-          dream vacation
-        </h1>
-        <p class="text-white">Quite and endlessly beautiful hideaway</p>
+        <h1 class="text-3xl xl:text-6xl text-white mb-10 font-light"></h1>
+        <p class="text-white"></p>
         <div class="mt-5">
           <button class="bg-white p-4 text-black">About Us</button>
           <button class="text-white ml-7">
@@ -71,7 +82,10 @@
         </div>
       </div>
       <div class="right-form xl:w-1/2">
-        <form class="bg-white xl:w-[60%] p-10 flex flex-col mt-5 xl:mt-0">
+        <form
+          class="bg-white xl:w-[60%] md:p-10 p-2 m-2 flex flex-col mt-5 xl:mt-0"
+          name="form"
+        >
           <div class="form-header">
             <h4 class="text-3xl font-light">Search Room</h4>
             <p>Get the latest on our COVID-19 response</p>
@@ -83,11 +97,11 @@
                 <label for="">Checkin*</label>
               </div>
               <input
-                type="text"
-                onfocus="(this.type='date')"
+                type="date"
                 placeholder="Check in Date"
                 class="border-b-2 border-slate-200 mt-1 bg-transparent w-full outline-none"
                 required
+                name="checkin"
               />
             </div>
             <div class="w-[45%]">
@@ -96,11 +110,11 @@
                 <label for="">Checkout*</label>
               </div>
               <input
-                type="text"
-                onfocus="(this.type='date')"
+                type="date"
                 placeholder="Checkout Date"
                 class="border-b-2 border-slate-200 mt-1 bg-transparent w-full outline-none"
                 required
+                name="checkout"
               />
             </div>
           </div>
@@ -113,6 +127,7 @@
               type="number"
               class="border-b-2 border-slate-200 p-1 w-full outline-none"
               required
+              name="adults"
             />
           </div>
           <div>
@@ -124,9 +139,10 @@
               type="number"
               class="border-b-2 border-slate-200 p-1 w-full outline-none"
               required
+              name="children"
             />
           </div>
-          <button class="bg-[#0a205c] text-white py-3 mt-4">
+          <button class="bg-[#0a205c] text-white py-3 mt-4 submitBtn">
             Check availability
           </button>
         </form>
@@ -149,28 +165,26 @@
       </div>
       <div class="relative xl:w-1/2 h-full flex mb-10 flex-col">
         <div class="xl:absolute top-[10%] my-5">
-          <img src="./assets/london.png" alt="" class="w-full" />
+          <img src="./assets/london.png" alt="london" class="w-full" />
         </div>
         <div class="xl:absolute top-[6%] left-[40%] mb-5">
-          <img src="./assets/osaka.png" alt="" class="w-full" />
+          <img src="./assets/osaka.png" alt="osaka" class="w-full" />
         </div>
         <div class="xl:absolute top-[50%] left-[10%] mb-5">
-          <img src="./assets/rome.png" alt="" class="xl:w-[80%] w-full" />
+          <img src="./assets/rome.png" alt="rome" class="xl:w-[80%] w-full" />
         </div>
       </div>
     </section>
 
     <!-- slider -->
     <section
-      class="my-5 flex flex-col xl:flex-row m-auto items-center justify-between blue-background text-white py-5 xl:py-0"
+      class="carousel my-5 flex flex-col xl:flex-row m-auto items-center justify-between blue-background text-white py-5 xl:py-0"
     >
-      <div class="text xl:w-[35%] leading-loose py-5 xl:pl-24 pl-5">
-        <p>Elegance and comfort</p>
-        <h3 class="text-4xl">Standard Room</h3>
-        <p>From 150$ /night</p>
-        <p class="w-full">
-          with wide and comfortable areas and daylight pouring in from the..
-        </p>
+      <div class="swiper-text xl:w-[35%] leading-loose py-5 xl:pl-24 pl-5">
+        <p class="subHeading"></p>
+        <h3 class="text-4xl heading"></h3>
+        <p class="rate"></p>
+        <p class="w-full description"></p>
         <div class="w-[80%] flex justify-between my-5">
           <div>
             <h4>Bed:</h4>
@@ -179,10 +193,33 @@
             <h4>View:</h4>
           </div>
           <div>
-            <p>Queen Size Bed</p>
-            <p>2 Adults, 1 children</p>
-            <p>55sqm</p>
-            <p>garden view</p>
+            <p class="bed"></p>
+            <p class="capacity"></p>
+            <p class="roomSize"></p>
+            <p class="view"></p>
+          </div>
+        </div>
+        <button class="p-2 border-2 border-white">View Detail</button>
+      </div>
+      <div
+        class="swiper-text hidden xl:w-[35%] leading-loose py-5 xl:pl-24 pl-5"
+      >
+        <p class="subHeading"></p>
+        <h3 class="text-4xl heading"></h3>
+        <p class="rate"></p>
+        <p class="w-full description"></p>
+        <div class="w-[80%] flex justify-between my-5">
+          <div>
+            <h4>Bed:</h4>
+            <h4>Capacity:</h4>
+            <h4>Room Size:</h4>
+            <h4>View:</h4>
+          </div>
+          <div>
+            <p class="bed"></p>
+            <p class="capacity"></p>
+            <p class="roomSize"></p>
+            <p class="view"></p>
           </div>
         </div>
         <button class="p-2 border-2 border-white">View Detail</button>
@@ -191,12 +228,12 @@
         <div class="swiper-wrapper w-full">
           <div class="swiper-slide w-full">
             <div class="img w-full">
-              <img src="./assets/Group10483.png" alt="" class="w-full" />
+              <img src="" alt="room" class="w-full" />
             </div>
           </div>
           <div class="swiper-slide">
             <div class="img">
-              <img src="./assets/Group10483.png" alt="" class="w-full" />
+              <img src="" alt="room" class="w-full" />
             </div>
           </div>
         </div>
@@ -277,7 +314,7 @@
         <div class="xl:w-1/2">
           <img
             src="./assets/ocean-travel-modern-nobody-infinity.jpg"
-            alt=""
+            alt="ocean"
             class="w-full"
           />
         </div>
@@ -286,7 +323,7 @@
         <div class="xl:w-1/2">
           <img
             src="./assets/ocean-travel-modern-nobody-infinity.jpg"
-            alt=""
+            alt="ocean"
             class="w-full"
           />
         </div>
@@ -324,20 +361,17 @@
           the luxury of Hotel Mikalto
         </p>
       </div>
-      <div class="cards w-full flex justify-between flex-col xl:flex-row">
+      <div
+        class="experience-cards w-full flex justify-between flex-col xl:flex-row"
+      >
         <div class="card xl:w-[20%] xl:text-start leading-loose text-center">
           <div>
-            <img src="./assets/card-1.jpeg" alt="" class="w-full" />
+            <img src="" alt="spa" class="w-full" />
           </div>
           <div class="mt-4">
-            <p>WELLNESS</p>
-            <p class="text-2xl">Dedicated to wellness</p>
-            <p class="my-4">
-              Aman's approach to wellness is focused on personalisation, privacy
-              and seclusion. Local spa rituals with indigenous ingredients,
-              offer a profoundly therapeutic touch, and a gentle sense of
-              discovery.
-            </p>
+            <p class="heading"></p>
+            <p class="text-2xl subheading"></p>
+            <p class="my-4 content"></p>
             <a href="#">
               Discover More <i class="fas fa fa-thin fa-arrow-right"></i>
             </a>
@@ -345,15 +379,12 @@
         </div>
         <div class="card xl:w-[20%] xl:text-start leading-loose text-center">
           <div>
-            <img src="./assets/card-2.jpeg" alt="" class="w-full" />
+            <img src="" alt="travel" class="w-full" />
           </div>
           <div class="mt-4">
-            <p>GIFT CARDS</p>
-            <p class="text-2xl">The gift of future travel</p>
-            <p class="my-4">
-              Share extraordinary experiences with the Aman E- Gift Card
-              delivered instantly and offering memories that last a lifetime.
-            </p>
+            <p class="heading"></p>
+            <p class="text-2xl subheading"></p>
+            <p class="my-4 content"></p>
             <a href="#">
               Discover More <i class="fas fa fa-thin fa-arrow-right"></i>
             </a>
@@ -361,15 +392,12 @@
         </div>
         <div class="card xl:w-[20%] xl:text-start leading-loose text-center">
           <div>
-            <img src="./assets/card-4.jpeg" alt="" class="w-full" />
+            <img src="" alt="adventure in wild" class="w-full" />
           </div>
           <div class="mt-4">
-            <p>MIKALTO SHOP</p>
-            <p class="text-2xl">The spa experience from home</p>
-            <p class="my-4">
-              Skincare and Spa supplements harness powerful natural ingredients
-              to provide balance and optimal wellbeing.
-            </p>
+            <p class="heading"></p>
+            <p class="text-2xl subheading"></p>
+            <p class="my-4 content"></p>
             <a href="#">
               Discover More <i class="fas fa fa-thin fa-arrow-right"></i>
             </a>
@@ -377,22 +405,19 @@
         </div>
         <div class="card xl:w-[20%] xl:text-start leading-loose text-center">
           <div>
-            <img src="./assets/card-3.jpeg" alt="" class="w-full" />
+            <img src="" alt="amenities" class="w-full" />
           </div>
           <div class="mt-4">
-            <p>EXPERIENCE</p>
-            <p class="text-2xl">Adventures in the Wild</p>
-            <p class="my-4">
-              Skincare and Spa supplements harness powerful natural ingredients
-              to provide balance and optimal wellbeing.
-            </p>
+            <p class="heading"></p>
+            <p class="text-2xl subheading"></p>
+            <p class="my-4 content"></p>
             <a href="#">
               Discover More <i class="fas fa fa-thin fa-arrow-right"></i>
             </a>
           </div>
         </div>
       </div>
-      <button class="border-2 border-[#0a205c] p-3">View all services</button>
+      <a href="#" class="border-2 border-[#0a205c] p-3">View all services</a>
     </section>
 
     <!-- say hello -->
@@ -401,7 +426,7 @@
     >
       <div class="xl:w-1/2">
         <div class="bg-white xl:w-[55%] p-10">
-          <h3 class="text-2xl">Say hello to a whole new you</h3>
+          <p class="text-2xl subheading">Say hello to a whole new you</p>
           <p class="my-5">
             Proin nec leo vel metus faucibus vehicula. Donec vulputate in magna
             eget egestas. Aliquam ac facilisis ante, sit amet tincidunt ante.
@@ -422,7 +447,7 @@
         <div class="card flex xl:mr-5 mb-4 flex-col">
           <div class="mb-4 flex items-center">
             <div class="w-[20%]">
-              <img src="./assets/member1.png" alt="" class="w-full" />
+              <img src="./assets/member1.png" alt="selena" class="w-full" />
             </div>
             <div class="ml-5">
               <p>Selena</p>
@@ -441,7 +466,7 @@
         <div class="card flex xl:mr-5 mb-4 flex-col">
           <div class="mb-4 flex items-center">
             <div class="w-[20%]">
-              <img src="./assets/member2.png" alt="" class="w-full" />
+              <img src="./assets/member2.png" alt="selena" class="w-full" />
             </div>
             <div class="ml-5">
               <p>Selena</p>
@@ -461,7 +486,7 @@
         <div class="card flex xl:mr-5 flex-col">
           <div class="mb-4 flex items-center">
             <div class="w-[20%]">
-              <img src="./assets/member3.png" alt="" />
+              <img src="./assets/member3.png" alt="selena" />
             </div>
             <div class="ml-5">
               <p>Selena</p>
@@ -549,19 +574,19 @@
         <div class="xl:w-1/2 mr-10 mb-10 xl:mb-0">
           <img
             src="./assets//goutham-krishna-h5wvMCdOV3w-unsplash.jpg"
-            alt=""
+            alt="nature"
             class="w-full"
           />
         </div>
         <div class="xl:w-1/2 flex flex-col items-center justify-center">
           <img
             src="./assets/dawid-zawila--G3rw6Y02D0-unsplash.jpg"
-            alt=""
+            alt="nature"
             class="w-full mb-10"
           />
           <img
             src="./assets/lukasz-szmigiel-jFCViYFYcus-unsplash.jpg"
-            alt=""
+            alt="nature"
             class="w-full"
           />
         </div>
