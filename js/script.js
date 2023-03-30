@@ -4,8 +4,9 @@ const submitBtn = document.querySelector(".submitBtn");
 const banner = document.querySelector("#banner");
 const articleCards = document.querySelectorAll(".experience-cards .card");
 const swiperCards = document.querySelectorAll(".swiper-slide");
-const swiperText = document.querySelectorAll(".swiper-text");
-const carousel = document.querySelector(".carousel");
+const swiperText = document.querySelector(".swiper-text");
+const swiperBtnNext = document.querySelector(".swiper-button-next");
+const swiperBtnPrev = document.querySelector(".swiper-button-prev");
 
 var swiper = new Swiper(".mySwiper", {
   navigation: {
@@ -26,7 +27,7 @@ submitBtn.addEventListener("click", (e) => {
     form.adults.value.trim().length > 0 &&
     form.children.value.trim().length > 0
   ) {
-    fetch("http://localhost:5000", {
+    fetch("http://localhost:5000/post-data", {
       method: "POST",
       headers: {
         "Content-type": "application/json; charset=UTF-8",
@@ -73,20 +74,48 @@ function addCarousel(carouselData) {
     card.querySelector("img").src = carouselData.data[index].imageURL;
   });
 
-  swiperText.forEach((text, index) => {
-    text.querySelector(".subHeading").textContent =
-      carouselData.data[index].subHeading;
-    text.querySelector(".heading").textContent =
-      carouselData.data[index].heading;
-    text.querySelector(".rate").textContent = carouselData.data[index].rate;
-    text.querySelector(".description").textContent =
-      carouselData.data[index].description;
-    text.querySelector(".bed").textContent = carouselData.data[index].bed;
-    text.querySelector(".capacity").textContent =
-      carouselData.data[index].capacity;
-    text.querySelector(".roomSize").textContent =
-      carouselData.data[index].roomSize;
-    text.querySelector(".view").textContent = carouselData.data[index].view;
+  swiperText.querySelector(".subHeading").textContent =
+    carouselData.data[0].subHeading;
+  swiperText.querySelector(".heading").textContent =
+    carouselData.data[0].heading;
+  swiperText.querySelector(".rate").textContent = carouselData.data[0].rate;
+  swiperText.querySelector(".description").textContent =
+    carouselData.data[0].description;
+  swiperText.querySelector(".bed").textContent = carouselData.data[0].bed;
+  swiperText.querySelector(".capacity").textContent =
+    carouselData.data[0].capacity;
+  swiperText.querySelector(".roomSize").textContent =
+    carouselData.data[0].roomSize;
+  swiperText.querySelector(".view").textContent = carouselData.data[0].view;
+
+  function swiperChange() {
+    for (let index = 0; index < swiperCards.length; index++) {
+      if (swiperCards[index].classList.contains("swiper-slide-active")) {
+        console.log("hi");
+        swiperText.querySelector(".subHeading").textContent =
+          carouselData.data[index].subHeading;
+        swiperText.querySelector(".heading").textContent =
+          carouselData.data[index].heading;
+        swiperText.querySelector(".rate").textContent =
+          carouselData.data[index].rate;
+        swiperText.querySelector(".description").textContent =
+          carouselData.data[index].description;
+        swiperText.querySelector(".bed").textContent =
+          carouselData.data[index].bed;
+        swiperText.querySelector(".capacity").textContent =
+          carouselData.data[index].capacity;
+        swiperText.querySelector(".roomSize").textContent =
+          carouselData.data[index].roomSize;
+        swiperText.querySelector(".view").textContent =
+          carouselData.data[index].view;
+      }
+    }
+  }
+  swiperBtnNext.addEventListener("click", () => {
+    swiperChange();
+  });
+  swiperBtnPrev.addEventListener("click", () => {
+    swiperChange();
   });
 }
 
@@ -119,14 +148,3 @@ function addCarousel(carouselData) {
       addCarousel(data);
     });
 })();
-
-carousel.addEventListener("click", (e) => {
-  if (
-    e.target.classList.contains("swiper-button-next") ||
-    e.target.classList.contains("swiper-button-prev")
-  ) {
-    swiperText.forEach((text) => {
-      text.classList.toggle("hidden");
-    });
-  }
-});

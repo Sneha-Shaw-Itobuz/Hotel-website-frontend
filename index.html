@@ -20,8 +20,9 @@
     />
   </head>
   <body>
+    <!-- navbar -->
     <nav
-      class="flex w-full justify-between p-3 xl:px-5 items-center text-[#0a205c] relative"
+      class="flex w-full justify-between p-3 xl:px-5 items-center text-[#0a205c] relative max-width"
     >
       <div
         class="logo xl:w-[16%] w-[55%] flex items-center text-center flex-col"
@@ -31,35 +32,48 @@
       </div>
       <i class="fa fas fa-light fa-bars xl:hidden menu"></i>
       <div
-        class="list hidden xl:flex xl:w-[30%] xl:static absolute top-full bg-white w-full text-center left-0 py-2"
+        class="list hidden xl:flex xl:w-[40%] xl:static absolute top-full bg-white w-full text-center left-0 py-2"
       >
         <ul
           class="flex w-full justify-between items-center flex-col xl:flex-row"
         >
-          <li class="my-5">
+          <li
+            class="py-2 my-3 px-3 hover:bg-[#0a205c] hover:text-white rounded-lg"
+          >
             <a href="#">Home</a>
           </li>
-          <li class="my-5">
+          <li
+            class="py-2 my-3 px-3 hover:bg-[#0a205c] hover:text-white rounded-lg"
+          >
             <a href="#">Our Rooms</a>
           </li>
-          <li class="my-5">
+          <li
+            class="py-2 my-3 px-3 hover:bg-[#0a205c] hover:text-white rounded-lg"
+          >
             <a href="#">Page</a>
           </li>
-          <li class="my-5">
+          <li
+            class="py-2 my-3 px-3 hover:bg-[#0a205c] hover:text-white rounded-lg"
+          >
             <a href="#">Features</a>
           </li>
-          <li class="my-5">
+          <li
+            class="py-2 my-3 px-3 hover:bg-[#0a205c] hover:text-white rounded-lg"
+          >
             <a href="#">Blog</a>
           </li>
-          <li class="my-5 hover:text-white hover:bg-blue-900">
+          <li
+            class="py-2 my-3 px-3 hover:bg-[#0a205c] hover:text-white rounded-lg"
+          >
             <a href="#">Contact</a>
           </li>
         </ul>
       </div>
       <div class="right w-[5%] hidden xl:flex justify-evenly items-center">
-        <p class="cursor-pointer mr-3">
-          EN <i class="fa-solid fa-chevron-down"></i>
-        </p>
+        <select name="" id="">
+          <option value="En">EN</option>
+          <option value="Hi">HI</option>
+        </select>
         <a href="#" class="cursor-pointer">
           <i class="fas fa-regular fa-bag-shopping"></i>
         </a>
@@ -69,21 +83,29 @@
     <!-- banner -->
     <section
       id="banner"
-      class="banner xl:h-[80vh] md:mx-10 flex flex-col xl:flex-row items-center text-[#0a205c] text-light py-5"
+      class="banner xl:h-[80vh] md:mx-10 2xl:mx-auto flex flex-col xl:flex-row items-center text-[#0a205c] text-light py-5 max-width"
     >
-      <div class="left-text pl-10 xl:w-1/2">
+      <div class="left-text md:pl-10 xl:w-1/2">
         <h1 class="text-3xl xl:text-6xl text-white mb-10 font-light"></h1>
         <p class="text-white"></p>
-        <div class="mt-5">
-          <button class="bg-white p-4 text-black">About Us</button>
-          <button class="text-white ml-7">
-            View Homestay <i class="fas fa fa-thin fa-arrow-right"></i>
+        <div class="mt-5 flex justify-evenly md:justify-between md:w-1/2">
+          <button
+            class="hover:bg-white p-4 hover:text-black bg-transparent text-white flex justify-center items-center"
+          >
+            About Us
+            <i class="fas fa fa-thin fa-arrow-right ml-2"></i>
+          </button>
+          <button
+            class="hover:bg-white p-4 hover:text-black bg-transparent text-white flex justify-center items-center"
+          >
+            View Homestay
+            <i class="fas fa fa-thin fa-arrow-right ml-2"></i>
           </button>
         </div>
       </div>
       <div class="right-form xl:w-1/2">
         <form
-          class="bg-white xl:w-[60%] md:p-10 p-2 m-2 flex flex-col mt-5 xl:mt-0"
+          class="bg-white xl:w-[60%] md:p-10 p-4 m-2 flex flex-col mt-5 xl:mt-0"
           name="form"
         >
           <div class="form-header">
@@ -142,7 +164,9 @@
               name="children"
             />
           </div>
-          <button class="bg-[#0a205c] text-white py-3 mt-4 submitBtn">
+          <button
+            class="bg-[#0a205c] hover:bg-cyan-800 text-white py-3 mt-4 submitBtn"
+          >
             Check availability
           </button>
         </form>
@@ -151,7 +175,7 @@
 
     <!-- grid of pics -->
     <section
-      class="xl:h-[60vh] flex items-center flex-col xl:flex-row justify-center px-10 py-10"
+      class="xl:h-[60vh] flex items-center flex-col xl:flex-row justify-center px-10 py-10 max-width"
     >
       <div class="xl:w-1/4 xl:mr-10">
         <p>Welcome To</p>
@@ -178,9 +202,9 @@
 
     <!-- slider -->
     <section
-      class="carousel my-5 flex flex-col xl:flex-row m-auto items-center justify-between blue-background text-white py-5 xl:py-0"
+      class="carousel my-5 flex flex-col md:flex-row m-auto items-center justify-between blue-background text-white py-5 md:py-0 max-width"
     >
-      <div class="swiper-text xl:w-[35%] leading-loose py-5 xl:pl-24 pl-5">
+      <div class="swiper-text md:w-[35%] leading-loose py-5 xl:pl-24 pl-5">
         <p class="subHeading"></p>
         <h3 class="text-4xl heading"></h3>
         <p class="rate"></p>
@@ -199,35 +223,22 @@
             <p class="view"></p>
           </div>
         </div>
-        <button class="p-2 border-2 border-white">View Detail</button>
+        <button
+          class="p-2 border-2 border-white hover:bg-white hover:text-[#0a205c]"
+        >
+          View Detail
+        </button>
       </div>
-      <div
-        class="swiper-text hidden xl:w-[35%] leading-loose py-5 xl:pl-24 pl-5"
-      >
-        <p class="subHeading"></p>
-        <h3 class="text-4xl heading"></h3>
-        <p class="rate"></p>
-        <p class="w-full description"></p>
-        <div class="w-[80%] flex justify-between my-5">
-          <div>
-            <h4>Bed:</h4>
-            <h4>Capacity:</h4>
-            <h4>Room Size:</h4>
-            <h4>View:</h4>
-          </div>
-          <div>
-            <p class="bed"></p>
-            <p class="capacity"></p>
-            <p class="roomSize"></p>
-            <p class="view"></p>
-          </div>
-        </div>
-        <button class="p-2 border-2 border-white">View Detail</button>
-      </div>
-      <div class="swiper mySwiper xl:w-[50%] w-full">
+
+      <div class="swiper mySwiper md:w-[50%] w-full">
         <div class="swiper-wrapper w-full">
           <div class="swiper-slide w-full">
             <div class="img w-full">
+              <img src="" alt="room" class="w-full" />
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="img">
               <img src="" alt="room" class="w-full" />
             </div>
           </div>
@@ -244,7 +255,7 @@
 
     <!-- choose -->
     <section
-      class="w-full flex flex-col items-center justify-center p-4 text-left"
+      class="w-full flex flex-col items-center justify-center p-4 text-left max-width"
     >
       <h2 class="text-4xl mb-5 mr-auto xl:ml-36">Why choose our hotel?</h2>
       <div class="flex w-[80%] flex-col xl:flex-row">
@@ -292,7 +303,7 @@
     </section>
 
     <!-- activities -->
-    <section class="w-full text-white my-5">
+    <section class="w-full text-white my-5 max-width">
       <div class="bg-blue-900 flex flex-col xl:flex-row">
         <div
           class="xl:w-1/2 py-2 flex flex-col justify-center xl:pl-16 pl-10 items-start"
@@ -345,14 +356,18 @@
             <li>Turkish sauna</li>
             <li>Relax and therapy massage Book your stay</li>
           </ul>
-          <button class="border-2 mt-5 p-2 px-4 mb-5">Book Your Stay</button>
+          <button
+            class="border-2 mt-5 p-2 px-4 mb-5 hover:bg-white hover:text-[#0a205c]"
+          >
+            Book Your Stay
+          </button>
         </div>
       </div>
     </section>
 
     <!-- article cards -->
     <section
-      class="w-full flex flex-col items-center justify-center p-5 text-center"
+      class="w-full flex flex-col items-center justify-center p-5 text-center max-width"
     >
       <div class="header mb-7">
         <p>EXPERIENCE MATTERS</p>
@@ -417,12 +432,16 @@
           </div>
         </div>
       </div>
-      <a href="#" class="border-2 border-[#0a205c] p-3">View all services</a>
+      <a
+        href="#"
+        class="border-2 border-[#0a205c] p-3 hover:bg-[#0a205c] hover:text-white"
+        >View all services</a
+      >
     </section>
 
     <!-- say hello -->
     <section
-      class="say-hello xl:h-[50vh] flex justify-end items-center p-3 xl:p-10"
+      class="say-hello xl:h-[50vh] flex justify-end items-center p-3 xl:p-10 max-width"
     >
       <div class="xl:w-1/2">
         <div class="bg-white xl:w-[55%] p-10">
@@ -441,7 +460,7 @@
 
     <!-- reviews -->
     <section
-      class="flex items-center justify-center py-10 flex-col xl:flex-row"
+      class="flex items-center justify-center py-10 flex-col xl:flex-row max-width"
     >
       <div class="flex w-[80%] flex-col xl:flex-row">
         <div class="card flex xl:mr-5 mb-4 flex-col">
@@ -508,7 +527,7 @@
 
     <!-- maps -->
     <section
-      class="flex xl:w-[70%] items-center m-auto justify-center flex-col xl:flex-row p-5 py-16"
+      class="flex xl:w-[70%] items-center m-auto justify-center flex-col xl:flex-row p-5 py-16 max-width"
     >
       <div class="xl:w-1/2 xl:mr-10">
         <p>GETTING HERE</p>
@@ -569,13 +588,13 @@
     </section>
 
     <!-- nature -->
-    <section class="flex bg-amber-100 flex-col xl:flex-row">
-      <div class="xl:w-[80%] mt-[-66px] flex flex-col xl:flex-row p-5">
+    <section class="flex bg-amber-100 flex-col xl:flex-row max-width">
+      <div class="xl:w-[80%] md:mt-[-66px] flex flex-col xl:flex-row p-5">
         <div class="xl:w-1/2 mr-10 mb-10 xl:mb-0">
           <img
             src="./assets//goutham-krishna-h5wvMCdOV3w-unsplash.jpg"
             alt="nature"
-            class="w-full"
+            class="w-[96%]"
           />
         </div>
         <div class="xl:w-1/2 flex flex-col items-center justify-center">
@@ -601,13 +620,15 @@
           accusantium libero commodi id officiis itaque esse adipisci,
           necessitatibus asperiores, illo odio.
         </p>
-        <button class="bg-[#0a205c] text-white p-2 px-6">Join Us</button>
+        <button class="bg-[#0a205c] hover:bg-cyan-800 text-white p-2 px-6">
+          Join Us
+        </button>
       </div>
     </section>
 
     <!-- subscribe -->
     <section
-      class="flex flex-col items-center justify-center py-10 text-center px-2"
+      class="flex flex-col items-center justify-center py-10 text-center px-2 max-width"
     >
       <p>Stories developed straight</p>
       <h3 class="text-3xl my-2">Get news and update to your Inbox</h3>
@@ -621,7 +642,7 @@
           required
         />
         <button
-          class="bg-[#0a205c] text-white p-2 px-5 xl:w-[unset] w-[60%] m-auto"
+          class="bg-[#0a205c] hover:bg-cyan-800 text-white p-2 px-5 xl:w-[unset] w-[60%] m-auto"
         >
           Subscribe
         </button>
@@ -634,7 +655,7 @@
 
     <!-- footer  -->
     <footer
-      class="w-full flex flex-col justify-center items-center p-5 blue-background text-slate-500"
+      class="w-full flex flex-col justify-center items-center p-5 blue-background text-slate-500 max-width"
     >
       <div
         class="xl:w-3/4 flex flex-col xl:flex-row justify-between xl:items-start items-center text-center"
@@ -655,42 +676,97 @@
           >
             <p class="">Follow Us:</p>
             <div class="xl:ml-5 flex">
-              <a href="#"> <i class="p-2 fa-brands fa-facebook-f"></i></a>
-              <a href="#"> <i class="p-2 fa-brands fa-instagram"></i></a>
-              <a href="#"> <i class="p-2 fa-brands fa-twitter"></i></a>
-              <a href="#"> <i class="p-2 fa-brands fa-youtube"></i></a>
-              <a href="#"> <i class="p-2 fa-brands fa-pinterest"></i></a>
+              <a
+                href="#"
+                class="hover:text-[#0a205c] hover:bg-white rounded-full"
+              >
+                <i class="p-2 fa-brands fa-facebook-f"></i
+              ></a>
+              <a
+                href="#"
+                class="hover:text-[#0a205c] hover:bg-white rounded-full"
+              >
+                <i class="p-2 fa-brands fa-instagram"></i
+              ></a>
+              <a
+                href="#"
+                class="hover:text-[#0a205c] hover:bg-white rounded-full"
+              >
+                <i class="p-2 fa-brands fa-twitter"></i
+              ></a>
+              <a
+                href="#"
+                class="hover:text-[#0a205c] hover:bg-white rounded-full"
+              >
+                <i class="p-2 fa-brands fa-youtube"></i
+              ></a>
+              <a
+                href="#"
+                class="hover:text-[#0a205c] hover:bg-white rounded-full"
+              >
+                <i class="p-2 fa-brands fa-pinterest"></i
+              ></a>
             </div>
           </div>
         </div>
         <div>
           <h5 class="mt-5 text-white mb-7 font-semibold">About</h5>
           <ul>
-            <li class="mb-3"><a href="#">About Us</a></li>
-            <li class="mb-3"><a href="#">Careers</a></li>
-            <li class="mb-3"><a href="#">Contact Us</a></li>
-            <li class="mb-3"><a href="#">Blog</a></li>
-            <li class="mb-3"><a href="#">Gift Cards</a></li>
+            <li class="mb-3 hover:text-white hover:underline">
+              <a href="#">About Us</a>
+            </li>
+            <li class="mb-3 hover:text-white hover:underline">
+              <a href="#">Careers</a>
+            </li>
+            <li class="mb-3 hover:text-white hover:underline">
+              <a href="#">Contact Us</a>
+            </li>
+            <li class="mb-3 hover:text-white hover:underline">
+              <a href="#">Blog</a>
+            </li>
+            <li class="mb-3 hover:text-white hover:underline">
+              <a href="#">Gift Cards</a>
+            </li>
           </ul>
         </div>
         <div>
           <h5 class="mt-5 text-white mb-7 font-semibold">Services</h5>
           <ul>
-            <li class="mb-3"><a href="#">Spa</a></li>
-            <li class="mb-3"><a href="#">Weddinng</a></li>
-            <li class="mb-3"><a href="#">Dining</a></li>
-            <li class="mb-3"><a href="#">Event</a></li>
-            <li class="mb-3"><a href="#">Bar</a></li>
+            <li class="mb-3 hover:text-white hover:underline">
+              <a href="#">Spa</a>
+            </li>
+            <li class="mb-3 hover:text-white hover:underline">
+              <a href="#">Weddinng</a>
+            </li>
+            <li class="mb-3 hover:text-white hover:underline">
+              <a href="#">Dining</a>
+            </li>
+            <li class="mb-3 hover:text-white hover:underline">
+              <a href="#">Event</a>
+            </li>
+            <li class="mb-3 hover:text-white hover:underline">
+              <a href="#">Bar</a>
+            </li>
           </ul>
         </div>
         <div>
           <h5 class="mt-5 text-white mb-7 font-semibold">Quick Links</h5>
           <ul>
-            <li class="mb-3"><a href="#">Facilities</a></li>
-            <li class="mb-3"><a href="#">Accomodation</a></li>
-            <li class="mb-3"><a href="#">Reservation</a></li>
-            <li class="mb-3"><a href="#">Why choose us</a></li>
-            <li class="mb-3"><a href="#">Restaurant</a></li>
+            <li class="mb-3 hover:text-white hover:underline">
+              <a href="#">Facilities</a>
+            </li>
+            <li class="mb-3 hover:text-white hover:underline">
+              <a href="#">Accomodation</a>
+            </li>
+            <li class="mb-3 hover:text-white hover:underline">
+              <a href="#">Reservation</a>
+            </li>
+            <li class="mb-3 hover:text-white hover:underline">
+              <a href="#">Why choose us</a>
+            </li>
+            <li class="mb-3 hover:text-white hover:underline">
+              <a href="#">Restaurant</a>
+            </li>
           </ul>
         </div>
         <div>
@@ -711,20 +787,22 @@
         <ul
           class="xl:ml-10 flex flex-col xl:flex-row items-center justify-center"
         >
-          <li>
+          <li class="hover:underline">
             <a href="#">Privacy</a>
           </li>
-          <li class="xl:mx-5">
+          <li class="xl:mx-5 hover:underline">
             <a href="#">Terms</a>
           </li>
-          <li>
+          <li class="hover:underline">
             <a href="#">Site map</a>
           </li>
         </ul>
         <p class="xl:ml-auto text-center cursor-pointer">
           <i class="fas fa-light fa-globe"></i>
-          En
-          <i class="fa-solid fa-chevron-down"></i>
+          <select name="" id="" class="bg-transparent outline-0">
+            <option value="En">EN</option>
+            <option value="Hi">HI</option>
+          </select>
         </p>
       </div>
     </footer>
