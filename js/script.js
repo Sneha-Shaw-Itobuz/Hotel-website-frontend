@@ -1,6 +1,7 @@
 const menuBar = document.querySelector(".menu");
 const list = document.querySelector(".list");
 const submitBtn = document.querySelector(".submitBtn");
+const subscribeBtn = document.querySelector(".subscribe-btn");
 const banner = document.querySelector("#banner");
 const articleCards = document.querySelectorAll(".experience-cards .card");
 const swiperCards = document.querySelectorAll(".swiper-slide");
@@ -45,6 +46,29 @@ submitBtn.addEventListener("click", (e) => {
       setTimeout(() => {
         submitBtn.textContent = "Submit";
       }, 5000);
+    });
+  } else {
+    alert("fields are empty");
+  }
+});
+
+subscribeBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  let validRegex =/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  if (
+    subscribeForm.email.value.trim().length > 0 &&
+    subscribeForm.email.value.match(validRegex)
+  ) {
+    fetch("http://localhost:5000/newsletter", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json; charset=UTF-8",
+      },
+      body: `id=${Date.now()}&email=${subscribeForm.email.value}`,
+    }).then((res) => {
+      console.log("Request complete! response:", res);
+
+      subscribeForm.email.value = "";
     });
   } else {
     alert("fields are empty");
