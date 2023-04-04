@@ -172,3 +172,27 @@ function addCarousel(carouselData) {
       addCarousel(data);
     });
 })();
+
+(() => {
+  let today = new Date().toISOString().split("T")[0];
+  document.querySelectorAll("[type=date]").forEach((item) => {
+    item.setAttribute("min", today);
+  });
+})();
+
+document.querySelectorAll("[type=date]")[1  ].addEventListener("click", () => {
+  if (form.checkin.value.trim().length > 0) {
+    console.log(form.checkin.value);
+    document
+      .querySelectorAll("[type=date]")[1]
+      .setAttribute("min", form.checkin.value);
+  }
+});
+
+document.querySelectorAll("[type=date]")[0].addEventListener("click", () => {
+  if (form.checkout.value.trim().length > 0) {
+    document
+      .querySelectorAll("[type=date]")[0]
+      .setAttribute("max", form.checkout.value);
+  }
+});
